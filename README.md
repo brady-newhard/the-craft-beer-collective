@@ -1,4 +1,4 @@
-<h1 style="text-align:center;">🍺 The Craft Beer Collective 🍺</h1>
+# 🍺 The Craft Beer Collective 🍺
 
 
 
@@ -6,10 +6,10 @@
 
 ## Getting Started
 
-<h3 style="text-align:center;">ERD</h3>
+### ERD
 ![ERD](./public/images/ERD.png)
 
-<h3 style="text-align:center;">Wireframe</h3>
+### Wireframe
 ![Wireframe](./public/images/Wireframe.png)
 
 ## Attributions
