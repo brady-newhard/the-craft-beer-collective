@@ -2,7 +2,7 @@
 
 
 
-![Logo](./public/images/cbc-logo.PNG)
+![Logo](./public/images/cbc-logo-black.PNG)
 
 ## Getting Started
 
