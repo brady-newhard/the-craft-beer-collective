@@ -15,6 +15,7 @@ mongoose.connection.on('connected', () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(morgan('dev'));
@@ -32,13 +33,13 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/vip-lounge', (req, res) => {
-  if (req.session.user) {
-    res.send(`Welcome to the party ${req.session.user.username}.`);
-  } else {
-    res.send('Sorry, no guests allowed.');
-  }
-});
+// app.get('/vip-lounge', (req, res) => {
+//   if (req.session.user) {
+//     res.send(`Welcome to the party ${req.session.user.username}.`);
+//   } else {
+//     res.send('Sorry, no guests allowed.');
+//   }
+// });
 
 app.use('/auth', authController);
 

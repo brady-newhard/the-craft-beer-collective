@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+  
   <% if (user) { %>
-    <h1>Welcome to the app, <%= user.username %>!</h1>
+    <h1>Welcome to The Collective, <%= user.username %>!</h1>
     <p>
       <a href="/auth/sign-out">Sign out</a>
     </p>
@@ -18,8 +20,7 @@
       <a href="/auth/sign-in">Sign in</a>.
     </p>
   <% } %>
-  <p><a href="/vip-lounge">Get into the VIP Users Only lounge!</a></p>
+  <img src='/images/cbc-logo.PNG' width="500">
+  <!-- <p><a href="/vip-lounge">Get into the VIP Users Only lounge!</a></p> -->
 </body>
 </html>
-© 2025 GitHub, Inc.
-Help

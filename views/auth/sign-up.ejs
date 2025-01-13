@@ -7,9 +7,16 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <%- include('../partials/_navbar.ejs') %>
-  <h1>Create a new account!</h1>
+  <h1>Join the Collective!</h1>
   <form action="/auth/sign-up" method="POST">
+    <label for="firstName">First Name:</label>
+    <input type="text" name="firstName" id="firstName" required />
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="LastName" id="LastName"/>
+    <label for="email">email:</label>
+    <input type="text" name="email" id="email"/>
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" required />
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" required />
     <label for="password">Password:</label>
@@ -26,5 +33,6 @@
   <div>
     <a href="/"><button>Home</button></a>
   </div>
+  <img src='/images/cbc-logo-trans.png' width="500">
 </body>
 </html>

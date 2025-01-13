@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    /* background-image: url('/images/cbc-logo.PNG'); */
+    background-color: black;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    font-family: Arial, sans-serif;
+    color: white; 
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+/* nav {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: #333;
+    color: white;
+}
+  
+nav div {
+    display: flex;
+    gap: 0.75rem;
+}
+  
+nav a {
+    color: white;
+    text-decoration: none;
+}
+  
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-decoration: none; 
+    color: white; 
+    font-size: 5rem; 
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+}
+
+/* .food-list {
+    list-style-type: none; 
+    padding: 0; 
+} */
+
+/* .user-list {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.user-link {
+    text-decoration: underline; 
+    color: white; 
+    font-size: 1rem; 
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7); 
+}
+.user-link:hover {
+    color: blue;
+} */
