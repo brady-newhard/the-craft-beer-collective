@@ -10,15 +10,11 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>My Breweries</h1>
     <a href="/users/<%=user._id%>/breweries/new"><button>Add a Brewery</button></a>
-    <ul>
+    <ul class="brewery-list">
         <% breweries.forEach((brewery)=>{ %>
-        <li><%= brewery.name %>
-            <!-- Location: <%= brewery.location %>
-            Brewery Link: <%= brewery.link %>
-            Beer Consumed: <%= brewery.beer %>
-            Brewery Rating: <%= brewery.rating %>
-            Comments: <%= brewery.comment %> -->
-        </li>
+            <li> 
+                <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %></a>
+            </li>
         <% }) %>
       </ul>
   </body>

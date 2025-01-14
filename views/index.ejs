@@ -10,17 +10,9 @@
   <%- include('./partials/_navbar.ejs') %>
   <% if (user) { %>
     <h1>Welcome to The Collective, <%= user.username %>!</h1>
-    <!-- <p>
-      <a href="/auth/sign-out">Sign out</a>
-    </p> -->
   <% } else { %>
     <h1>Welcome to The Collective, my friend.</h1>
-    <!-- <p>
-      <a href="/auth/sign-up">Sign up</a> or
-      <a href="/auth/sign-in">Sign in</a>.
-    </p> -->
   <% } %>
   <img src='/images/cbc-logo-black.PNG' width="500">
-  <!-- <p><a href="/vip-lounge">Get into the VIP Users Only lounge!</a></p> -->
 </body>
 </html>

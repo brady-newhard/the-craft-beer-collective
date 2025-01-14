@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= brewery.name %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= brewery.name %></h1>
+        <ul>
+            <li class="brewery-list">
+                <div>Location: <%= brewery.location %></div>
+                <div>Brewery Link: <a href="<%= brewery.link %>"><%= brewery.link %></a></div>
+                <div>Beer Consumed: <%= brewery.beer %></div>
+                <div>Brewery Rating: <%= brewery.rating %></div>
+                <div>Comments: <%= brewery.comment %></div>
+            </li>
+      </ul>
+      <a href="/users/<%= user._id %>/breweries"><button>Back to My Breweries</button></a>
+  </body>
+</html>
