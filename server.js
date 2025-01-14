@@ -8,6 +8,10 @@ const morgan = require('morgan');
 const session = require('express-session');
 
 const authController = require('./controllers/auth.js');
+const breweriesController = require('./controllers/breweries.js');
+
+const isSignedIn = require('./middleware/is-signed-in.js');
+const passUserToView = require('./middleware/pass-user-to-view.js');
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -42,6 +46,8 @@ app.get('/', (req, res) => {
 // });
 
 app.use('/auth', authController);
+app.use(isSignedIn); 
+app.use('/users/:userId/breweries', breweriesController);
 
 app.listen(process.env.PORT, () => {
   console.log(`🎧Listening on http://localhost:${process.env.PORT}`);
