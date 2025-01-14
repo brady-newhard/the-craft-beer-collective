@@ -19,6 +19,12 @@ body {
     list-style-type: none;   
 }
 
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav {
     display: flex;
     justify-content: center;
