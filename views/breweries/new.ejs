@@ -9,6 +9,26 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Brewery</h1>
-    
+    <form action="/users/<%= user._id %>/breweries" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" />
+        <label for="link">Brewery Link:</label>
+        <input type="url" id="link" name="link" value="https://" />
+        <label for="beer">Beer Consumed:</label>
+        <input type="text" name="beer" id="beer" />
+        <label for="rating">Brewery Rating:</label>
+        <select id="rating" name="rating">
+            <option value="1">🍻</option>
+            <option value="2">🍻🍻</option>
+            <option value="3">🍻🍻🍻</option>
+            <option value="4">🍻🍻🍻🍻</option>
+            <option value="5">🍻🍻🍻🍻🍻</option>
+        </select>
+        <label for="comment">Comment:</label>
+        <input type="text" name="comment" id="comment" />
+        <button type="submit">Add Brewery</button>
+    </form>
   </body>
 </html>

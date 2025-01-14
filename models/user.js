@@ -36,8 +36,8 @@ const brewerySchema = new mongoose.Schema({
     required: true,
   },
   beer: {
-    type: [beerSchema],
-    default: []
+    type: String,
+    // default: []
   },
   rating: {
     type: Number,

@@ -45,6 +45,7 @@ app.get('/', (req, res) => {
 //   }
 // });
 
+app.use(passUserToView); 
 app.use('/auth', authController);
 app.use(isSignedIn); 
 app.use('/users/:userId/breweries', breweriesController);
