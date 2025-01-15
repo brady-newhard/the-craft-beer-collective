@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit <%= brewery.name %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit Brewery</h1>
+    <form class="brewery-list" action="/users/<%= user._id %>/breweries/<%= brewery._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= brewery.name %>" required />
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" value="<%= brewery.location %>" required />
+        <label for="link">Brewery Link:</label>
+        <input type="url" id="link" name="link" value="<%= brewery.link %>" />
+        <label for="beer">Beer Consumed:</label>
+        <input type="text" name="beer" id="beer" value="<%= brewery.beer %>" />
+        <label for="rating">Brewery Rating:</label>
+        <select id="rating" name="rating">
+            <option value="1">🍻</option>
+            <option value="2">🍻🍻</option>
+            <option value="3">🍻🍻🍻</option>
+            <option value="4">🍻🍻🍻🍻</option>
+            <option value="5">🍻🍻🍻🍻🍻</option>
+        </select>
+        <label for="comment">Comment:</label>
+        <input type="text" name="comment" id="comment" value="<%= brewery.comment %>" />
+        <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

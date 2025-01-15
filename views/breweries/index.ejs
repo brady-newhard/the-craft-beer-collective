@@ -13,7 +13,7 @@
     <ul class="brewery-list">
         <% breweries.forEach((brewery)=>{ %>
             <li> 
-                <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %></a>
+                <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %> in <%= brewery.location %></a>
             </li>
         <% }) %>
       </ul>

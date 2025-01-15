@@ -44,4 +44,43 @@ router.get('/:breweryId', async (req, res) => {
     }
   });
 
+// Edit
+router.get('/:breweryId/edit', async (req, res) => {
+    try { 
+        const user = await User.findById(req.session.user._id);
+        const brewery = user.brewery.id(req.params.breweryId);
+        res.render('breweries/edit.ejs', { brewery, user });
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
+
+// Delete
+router.delete('/:breweryId', async (req, res) => {
+    try {
+        const user = await User.findById(req.session.user._id);
+        user.brewery = user.brewery.filter((item) => item._id.toString() !== req.params.breweryId);
+        await user.save();
+        res.redirect(`/users/${req.session.user._id}/breweries`);
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
+  
+// Update
+router.put('/:breweryId', async (req, res) => {
+    try {
+        const user = await User.findById(req.session.user._id);
+        const brewery = user.brewery.id(req.params.breweryId);
+        brewery.set(req.body);
+        await user.save();
+        res.redirect(`/users/${req.session.user._id}/breweries`);
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
+
 module.exports = router;
