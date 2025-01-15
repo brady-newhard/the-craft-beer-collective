@@ -37,7 +37,7 @@ router.get('/:breweryId', async (req, res) => {
     try {
       const user = await User.findById(req.session.user._id);
       const brewery = user.brewery.id(req.params.breweryId);
-      res.render('breweries/show.ejs', { brewery, user });
+      res.render('breweries/show.ejs', { brewery, user, sessionUser: req.user });
     } catch (error) {
       console.log(error);
       res.redirect('/');

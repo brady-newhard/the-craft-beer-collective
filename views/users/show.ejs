@@ -9,11 +9,15 @@
 <body>
   <%- include('../partials/_navbar.ejs') %>
   <h1><%= user.username %>'s Breweries</h1>
-    <ul class="user-list">
-      <% user.brewery.forEach((brewery) => { %>
-        <li><a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %></a></li>
-      <% }) %>
-    </ul>
+  <ul class="user-list">
+    <% user.brewery.forEach((brewery) => { %>
+      <li>
+        <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>">
+          <%= brewery.name %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
   <a href="/users"><button>Back to The Collective</button></a>
 </body>
 </html>

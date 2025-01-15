@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Show
+// Show (users)
 router.get('/:userId', async (req, res) => {
     try {
       const user = await User.findById(req.params.userId);
@@ -24,5 +24,17 @@ router.get('/:userId', async (req, res) => {
       res.redirect('/');
     }
   });
+
+// Show (Brewery Details)
+router.get('/:userId/breweries/:breweryId', async (req, res) => {
+    try {
+      const user = await User.findById(req.params.userId);
+      const brewery = user.brewery.id(req.params.breweryId);
+      res.render('breweries/show.ejs', { user, brewery });
+    } catch (error) {
+      console.error('Error fetching brewery details:', error);
+      res.redirect('/');
+    }
+});
 
 module.exports = router;

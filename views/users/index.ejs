@@ -12,7 +12,7 @@
     <ul class="user-list">
         <% users.forEach((user) => { %>
           <li>
-            <a href="/users/<%= user._id %>" class="user-link"><%= user.username %></a>
+            <a href="/users/<%= user._id %>"><%= user.username %>'s Breweries</a>
           </li>
         <% }) %>
       </ul>
