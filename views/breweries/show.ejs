@@ -18,10 +18,12 @@
                 <div>Comments: <%= brewery.comment %></div>
             </li>
       </ul>
+      <% if (userId === breweryOwnerId) { %>
       <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>/edit"><button type="button">Edit Brewery</button></a>
       <form action="/users/<%= user._id %>/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete Brewery</button>
       </form>
+      <% } %>
       <a href="/users/<%= user._id %>/breweries"><button>Back to My Breweries</button></a>
   </body>
 </html>

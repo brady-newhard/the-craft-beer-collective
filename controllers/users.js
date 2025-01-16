@@ -6,7 +6,7 @@ const User = require('../models/user.js');
 // Index
 router.get('/', async (req, res) => {
     try {
-        const users = await User.find();
+        const users = await User.find({});
         res.render('users/index.ejs', { users });
     } catch (error) {
         console.log(error);
@@ -25,16 +25,99 @@ router.get('/:userId', async (req, res) => {
     }
   });
 
-// Show (Brewery Details)
-router.get('/:userId/breweries/:breweryId', async (req, res) => {
-    try {
-      const user = await User.findById(req.params.userId);
-      const brewery = user.brewery.id(req.params.breweryId);
-      res.render('breweries/show.ejs', { user, brewery });
-    } catch (error) {
-      console.error('Error fetching brewery details:', error);
+  // Index
+  router.get('/:userId/breweries', async (req, res) => {
+  try {
+      const user = await User.findById(req.session.user._id);
+      res.render('breweries/index.ejs', { user, breweries: user.brewery });
+  } catch (error) {
+      console.log(error);
       res.redirect('/');
-    }
+  }
+});
+
+// router.get('/:userId/breweries', async (req, res) => {
+//   try {
+//     const users = await User.find({})
+//     const breweries = users.flatMap(user => user.brewery.map(brewery => ({
+//       ...brewery.toObject(),
+//       createdBy: user._id, 
+//       ownerName: 
+//     })))
+//     console.log(breweries)
+//   } catch (error) {
+//         console.log(error);
+//        res.redirect('/');
+//      }
+
+// New
+router.get('/:userId/breweries/new', (req, res) => {
+  res.render('breweries/new.ejs');
+});
+
+// POST/Create
+router.post('/:userId/breweries/', async (req, res) => {
+  try {
+      const user = await User.findById(req.session.user._id);
+      user.brewery.push(req.body);
+      await user.save();
+      res.redirect(`/users/${req.session.user._id}/breweries`);
+  } catch (error) {
+      console.log(error);
+      res.redirect('/');
+  }
+});
+
+// Show
+router.get('/:userId/breweries/:breweryId', async (req, res) => {
+  try {
+    const { userId, breweryId } = req.params
+    const currentUser = await User.findById(userId);
+    const brewery = currentUser.brewery.id(breweryId);
+    res.render('breweries/show.ejs', { brewery, userId, breweryOwnerId: currentUser._id.toString() });
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
+// Edit
+router.get('/:userId/breweries/:breweryId/edit', async (req, res) => {
+  try { 
+      const user = await User.findById(req.session.user._id);
+      const brewery = user.brewery.id(req.params.breweryId);
+      res.render('breweries/edit.ejs', { brewery, user });
+  } catch (error) {
+      console.log(error);
+      res.redirect('/');
+  }
+});
+
+// Delete
+router.delete('/:userId/breweries/:breweryId', async (req, res) => {
+  try {
+      const user = await User.findById(req.session.user._id);
+      user.brewery = user.brewery.filter((item) => item._id.toString() !== req.params.breweryId);
+      await user.save();
+      res.redirect(`/users/${req.session.user._id}/breweries`);
+  } catch (error) {
+      console.log(error);
+      res.redirect('/');
+  }
+});
+
+// Update
+router.put('/:userId/breweries/:breweryId', async (req, res) => {
+  try {
+      const user = await User.findById(req.session.user._id);
+      const brewery = user.brewery.id(req.params.breweryId);
+      brewery.set(req.body);
+      await user.save();
+      res.redirect(`/users/${req.session.user._id}/breweries`);
+  } catch (error) {
+      console.log(error);
+      res.redirect('/');
+  }
 });
 
 module.exports = router;

@@ -45,6 +45,10 @@ const brewerySchema = new mongoose.Schema({
   },
   comment: {
     type: String,
+  },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }
 });
 
