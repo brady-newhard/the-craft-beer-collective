@@ -10,9 +10,22 @@
   <%- include('./partials/_navbar.ejs') %>
   <% if (user) { %>
     <h1>Welcome to The Collective, <%= user.username %>!</h1>
+    <ul>
+      It’s time to crack open a cold one and vibe with the best craft beer community on earth. Whether you’re chasing those dank IPAs, mellow stouts, or some funky sour brews, you’re in the right place. Here’s what you can do today:
+          <li>Discover New Breweries: Dive into your brewery list or check out what the crew is loving.</li>
+          <li>Add Your Favorites: Found a brew that blows your mind? Add it to the mix.</li>
+          Beer, community, good vibes—this is what it’s all about. So sit back, relax, and let’s get hoppy. 🍺 Cheers, <%= user.username %>!
+    </ul>     
   <% } else { %>
     <h1>Welcome to The Collective, my friend.</h1>
+    Your ultimate portal to the craft beer universe. A space where the art of brewing meets the vibes of a community that truly gets it. Whether you're a seasoned hop-head chasing those dank IPAs, a stout sage savoring the depths of dark brews, or just a curious soul ready to embark on a flavor journey, you’ve found your tribe.
+    Discover hidden breweries, share mind-blowing beer tales, and vibe with fellow brew adventurers from every corner of the world. Together, let’s raise a glass to the creativity, the passion, and the cosmic connections that make craft beer more than just a drink—it’s a lifestyle.
+    Ready to join The Collective?
+    Sign up today and dive into the craft beer experience like never before. The journey starts here:
+<a href="/auth/sign-up"><button>Join the Collective</button></a>
   <% } %>
+  
+
   <img src='/images/cbc-logo-black.PNG' width="500">
 </body>
 </html>

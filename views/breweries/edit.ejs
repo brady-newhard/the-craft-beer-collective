@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit <%= brewery.beer %></title>
+    <title>Edit <%= brewery.beer || 'Craft Beer' %></title>
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
@@ -18,17 +18,16 @@
         <input type="url" id="link" name="link" value="<%= brewery.link %>" />
         <h2>Beer Details</h2>
         <label for="beer">Name:</label>
-        <input type="text" name="beer" id="beer" value="<%= brewery.beer %>"/>
+        <input type="text" name="beer" id="beer" value="<%= brewery.beer %>" required />
         <label for="type">Style:</label>
-        <input type="text" name="type" id="type" value="<%= brewery.type %>"/>
-        <label for="type">Method:</label>
+        <input type="text" name="type" id="type" value="<%= brewery.type %>" required />
+        <label for="method">Method:</label>
         <select id="method" name="method">
           <option value="tap">Tap</option>
           <option value="can">Can</option>
           <option value="bottle">Bottle</option>
           <option value="other">Other</option>
       </select>
-        <input type="text" name="beer" id="beer" value="<%= brewery.beer %>" />
         <label for="rating">Rating:</label>
         <select id="rating" name="rating">
             <option value="🍻">🍻</option>
