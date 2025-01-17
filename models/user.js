@@ -1,26 +1,26 @@
 const mongoose = require('mongoose');
 
-const beerSchema = new mongoose.Schema({
-  name: { 
-    type: String, 
-    required: true,
-  },
-  type: { 
-    type: String, 
-    required: true,
-  },
-  method: { 
-    type: String, 
-    enum: ['tap', 'can', 'bottle', 'other'],
-  },
-  rating: {
-    type: Number,
-    enum: [1, 2, 3, 4, 5],
-  },
-  comment: {
-    type: String,
-  }
-});
+// const beerSchema = new mongoose.Schema({
+//   name: { 
+//     type: String, 
+//     required: true,
+//   },
+//   type: { 
+//     type: String, 
+//     required: true,
+//   },
+//   method: { 
+//     type: String, 
+//     enum: ['tap', 'can', 'bottle', 'other'],
+//   },
+//   rating: {
+//     type: Number,
+//     enum: [1, 2, 3, 4, 5],
+//   },
+//   comment: {
+//     type: String,
+//   }
+// });
  
 const brewerySchema = new mongoose.Schema({
   name: { 
@@ -39,9 +39,17 @@ const brewerySchema = new mongoose.Schema({
     type: String,
     // default: []
   },
+  type: { 
+    type: String, 
+    required: true,
+  },
+  method: { 
+    type: String, 
+    enum: ['tap', 'can', 'bottle', 'other'],
+  },
   rating: {
-    type: Number,
-    enum: [1, 2, 3, 4, 5],
+    type: String,
+    enum: ['🍻', '🍻🍻', '🍻🍻🍻', '🍻🍻🍻🍻', '🍻🍻🍻🍻🍻'],
   },
   comment: {
     type: String,

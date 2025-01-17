@@ -71,10 +71,11 @@ router.post('/:userId/breweries/', async (req, res) => {
 // Show
 router.get('/:userId/breweries/:breweryId', async (req, res) => {
   try {
-    const { userId, breweryId } = req.params
-    const currentUser = await User.findById(userId);
-    const brewery = currentUser.brewery.id(breweryId);
-    res.render('breweries/show.ejs', { brewery, userId, breweryOwnerId: currentUser._id.toString() });
+    const { userId, breweryId } = req.params;
+    const currentUserId = req.session.user._id;
+    const user = await User.findById(userId);
+    const brewery = user.brewery.id(breweryId);
+    res.render('breweries/show.ejs', { brewery, userId, currentUserId });
   } catch (error) {
     console.log(error);
     res.redirect('/');

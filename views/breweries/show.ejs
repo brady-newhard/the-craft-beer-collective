@@ -3,27 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= brewery.name %></title>
+    <title><%= brewery.beer %></title>
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= brewery.name %></h1>
+    <h1><%= brewery.name %>'s <%= brewery.beer %></h1>
         <ul>
             <li class="brewery-list">
                 <div>Location: <%= brewery.location %></div>
                 <div>Brewery Link: <a href="<%= brewery.link %>"><%= brewery.link %></a></div>
-                <div>Beer Consumed: <%= brewery.beer %></div>
-                <div>Brewery Rating: <%= brewery.rating %></div>
+                <h2>Beer Details</h2>
+                <div>Name: <%= brewery.beer %></div>
+                <div>Style: <%= brewery.type %></div>
+                <div>Method: <%= brewery.method %></div>
+                <div>Rating: <%= brewery.rating %></div>
                 <div>Comments: <%= brewery.comment %></div>
             </li>
       </ul>
-      <% if (userId === breweryOwnerId) { %>
-      <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>/edit"><button type="button">Edit Brewery</button></a>
-      <form action="/users/<%= user._id %>/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete Brewery</button>
-      </form>
-      <% } %>
-      <a href="/users/<%= user._id %>/breweries"><button>Back to My Breweries</button></a>
+      <% if (userId === currentUserId) { %>
+        <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>/edit"><button type="button">Edit Craft Beer</button></a>
+        <form action="/users/<%= user._id %>/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete Craft Beer</button>
+        </form>
+        <% } %>
+      <!-- <a href="/users/<%= user._id %>"><button>Back to <%= user.username %> Breweries</button></a> -->
   </body>
 </html>

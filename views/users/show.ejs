@@ -8,11 +8,11 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1><%= user.username %>'s Breweries</h1>
+  <h1><%= user.username %>'s Craft Beer's</h1>
   <ul class="user-list">
     <% user.brewery.forEach((brewery) => { %>
       <li>
-        <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %></a>
+        <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %>'s <%= brewery.beer %></a>
       </li>
     <% }) %>
   </ul>

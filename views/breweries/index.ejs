@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Breweries</title>
+    <title>My Craft Beers</title>
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>My Breweries</h1>
-    <a href="/users/<%=user._id%>/breweries/new"><button>Add a Brewery</button></a>
+    <h1>My Craft Beers</h1>
+    <a href="/users/<%=user._id%>/breweries/new"><button>Add a Craft Beer</button></a>
     <ul class="brewery-list">
         <% breweries.forEach((brewery)=>{ %>
             <li> 
-                <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %> in <%= brewery.location %></a>
+                <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %>'s <%= brewery.beer %></a>
             </li>
         <% }) %>
       </ul>
