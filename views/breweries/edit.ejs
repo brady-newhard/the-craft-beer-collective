@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit <%= brewery.beer || 'Craft Beer' %></title>
-    <link href="./css/output.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+    <!-- <link href="./css/output.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
@@ -41,5 +41,13 @@
         <input type="text" name="comment" id="comment" value="<%= brewery.comment %>" />
         <button type="submit">Submit</button>
     </form>
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+  
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>

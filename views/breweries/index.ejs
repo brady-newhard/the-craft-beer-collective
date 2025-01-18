@@ -14,10 +14,18 @@
     <ul class="brewery-list">
         <% breweries.forEach((brewery)=>{ %>
             <li> 
-                <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %>'s <%= brewery.beer %></a>
+                <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %>'s <%= brewery.beer %> <%= brewery.rating %></a>
             </li>
         <% }) %>
       </ul>
+      <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+    
+        menuToggle.addEventListener('click', () => {
+          menu.classList.toggle('active');
+        });
+      </script>
   </body>
   
 </html>

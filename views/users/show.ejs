@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/output.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+  <!-- <link href="./css/output.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/styles.css">
   <title><%= user.username %>'s Breweries</title>
 </head>
 <body>
@@ -18,5 +18,13 @@
     <% }) %>
   </ul>
   <a href="/users"><button>Back to The Collective</button></a>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

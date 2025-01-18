@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= brewery.beer %></title>
-    <link href="./css/output.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+    <!-- <link href="./css/output.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
@@ -28,6 +28,16 @@
           <button type="submit">Delete Craft Beer</button>
         </form>
         <% } %>
-      <!-- <a href="/users/<%= user._id %>"><button>Back to <%= user.username %> Breweries</button></a> -->
+        <div>
+          <a href="/users/<%= user._id %>/breweries"><button>Back to My Craft Beer</button></a>
+        </div>
+        <script>
+          const menuToggle = document.getElementById('menu-toggle');
+          const menu = document.getElementById('menu');
+      
+          menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+          });
+        </script>
   </body>
 </html>
