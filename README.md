@@ -1,4 +1,4 @@
-![Logo](./public/images/cbc-logo-transparent.PNG)
+![Logo](./public/images/cbc-logo-transparent.png)
 <h1 align="center">🍺 Welcome to The Craft Beer Collective 🍺</h1>
 
 Welcome to the craft Beer Collective. A page dedicated to craft beer and the people that drink them!
