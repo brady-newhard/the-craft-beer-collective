@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link href="./css/output.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/css/styles.css"> -->
   <title><%= user.username %>'s Breweries</title>
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1><%= user.username %>'s Craft Beer's</h1>
+  <h1><%= user.username %>'s Craft Beer</h1>
   <ul class="user-list">
     <% user.brewery.forEach((brewery) => { %>
       <li>

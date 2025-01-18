@@ -7,17 +7,16 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <h1>Sign in</h1>
+  <%- include('../partials/_navbar.ejs') %>
+  <!-- <h1>Sign in</h1> -->
+  <img src='../images/cbc-logo-transparent.PNG'>
   <form action="/auth/sign-in" method="POST">
     <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
+    <input class="signIn" type="text" name="username" id="username" required />
     <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
+    <input class="signIn" type="password" name="password" id="password" required />
+    
     <button type="submit">Sign in</button>
   </form>
-  <div>
-    <a href="/"><button>Home</button></a>
-  </div>
-  <img src='/images/cbc-logo.PNG' width="500">
 </body>
 </html>
