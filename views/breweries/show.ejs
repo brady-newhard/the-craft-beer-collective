@@ -4,40 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= brewery.beer %></title>
-    <!-- <link href="./css/output.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body class="background">
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= brewery.name %>'s <%= brewery.beer %></h1>
-        <ul>
-            <li class="brewery-list">
-                <div>Location: <%= brewery.location %></div>
-                <div>Brewery Link: <a href="<%= brewery.link %>"><%= brewery.link %></a></div>
-                <h2>Beer Details</h2>
-                <div>Name: <%= brewery.beer %></div>
-                <div>Style: <%= brewery.type %></div>
-                <div>Method: <%= brewery.method %></div>
-                <div>Rating: <%= brewery.rating %></div>
-                <div>Comments: <%= brewery.comment %></div>
-            </li>
-      </ul>
-      <% if (userId === currentUserId) { %>
-        <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>/edit"><button type="button">Edit Craft Beer</button></a>
-        <form action="/users/<%= user._id %>/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
-          <button type="submit">Delete Craft Beer</button>
-        </form>
-        <% } %>
-        <div>
-          <a href="/users/<%= user._id %>/breweries"><button>Back to My Craft Beer</button></a>
-        </div>
-        <script>
-          const menuToggle = document.getElementById('menu-toggle');
-          const menu = document.getElementById('menu');
-      
-          menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-          });
-        </script>
+    <img src='/images/cbc-logo-transparent.PNG' class="img-size">
+    <ul>
+      <li class="brewery-list">
+        <h2>Brewery Details</h2>
+        <div><%= brewery.name %></div>
+        <div><%= brewery.location %></div>
+        <div><a href="<%= brewery.link %>"><%= brewery.link %></a></div>
+        <h2>Beer Details</h2>
+        <div>Name: <%= brewery.beer %></div>
+        <div>Style: <%= brewery.type %></div>
+        <div>Method: <%= brewery.method %></div>
+        <div>Rating: <%= brewery.rating %></div>
+        <div>Comments: <%= brewery.comment %></div>
+      </li>
+    </ul>
+    <% if (userId === currentUserId) { %>
+      <a href="/users/<%= userId %>/breweries/<%= brewery._id %>/edit"><button>Edit</button></a>
+      <form action="/users/<%= userId %>/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+      </form>
+      <div>
+        <a href="/users/<%= user._id %>/breweries"><button>Back to My Craft Beer</button></a>
+      </div>
+    <% } else { %>
+      <a href="/users/">
+        <button>Back to The Collective</button>
+      </a>
+    <% } %>
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>

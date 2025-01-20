@@ -9,8 +9,8 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <img src='/images/cbc-logo-transparent.PNG' class="img-size">
     <h1>My Craft Beers</h1>
-    <img src='../images/cbc-logo-transparent.png'>
     <a href="/users/<%=user._id%>/breweries/new"><button>Add a Craft Beer</button></a>
     <div class="brewery-grid">
       <% breweries.forEach((brewery) => { %>

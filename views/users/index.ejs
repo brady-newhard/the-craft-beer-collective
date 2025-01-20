@@ -9,14 +9,14 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <img src='../images/cbc-logo-transparent.PNG' class="img-size">
     <h1>The Collective</h1>
-    <ul class="user-list">
+    <div class="user-grid">
         <% users.forEach((user) => { %>
-          <li>
+          <div class="user-item">
             <a href="/users/<%= user._id %>"><%= user.username %>'s Craft Beer List</a>
-          </li>
+          </div>
         <% }) %>
-      </ul>
       <script>
         const menuToggle = document.getElementById('menu-toggle');
         const menu = document.getElementById('menu');

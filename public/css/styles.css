@@ -16,8 +16,15 @@ body {
     text-align: center;
 }
 
+.img-size {
+    max-width: 75%; /* Ensures the image does not exceed the container's width */
+    height: auto;    /* Maintains the aspect ratio */
+    display: block;  /* Removes extra space at the bottom of inline images */
+    margin: 0 auto; 
+}
+
 .background {
-    background-image: url('/images/cbc-logo-transparent.PNG');
+    /* background-image: url('/images/cbc-logo-transparent.PNG'); */
     justify-content: center; 
     background-size: contain; 
     background-repeat: no-repeat;
@@ -48,7 +55,7 @@ h3 {
     margin: 1rem 0;
     padding-left: .5rem;
     color: #f0e9d1;
-  }
+}
   
 .highlights li {
     margin-bottom: 1rem;
@@ -120,11 +127,50 @@ img {
     list-style-type: none;   
 }
 
-.brewery-list a:hover {
-    color: blue; 
-    text-decoration: underline; 
+.brewery-list a {
+    text-decoration: none; 
+    color: #cca527; 
+    font-size: 1rem; 
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
 }
 
+.brewery-list a:hover {
+    color: white; 
+    text-decoration: underline;
+}
+
+.user-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 75%;
+}
+  
+.user-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.user-item a {
+    text-decoration: none; 
+    color: #cca527; 
+    font-size: 1rem; 
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+}
+
+.user-item a:hover {
+    color: white; 
+    text-decoration: underline;
+}
+ 
 form {
     display: flex;
     flex-direction: column;
@@ -159,6 +205,7 @@ button {
     cursor: pointer; 
     transition: background-color 0.3s ease, transform 0.2s ease;
 } 
+
 button:hover {
     background-color: #0a0b00;
     transform: scale(1.05);
@@ -218,8 +265,8 @@ button:hover {
     background-color: #E7C96A; 
     color: #1a1a1a; 
 }
-  
-  /* Responsive Styles */
+   
+/* Responsive Styles */
 @media (max-width: 768px) {
     
 .menu-toggle {

@@ -9,7 +9,8 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Add a New Craft Beer</h1>
+    <img src='/images/cbc-logo-transparent.PNG' class="img-size">
+    <h2>Add a New Craft Beer</h2>
     <form class="brewery-list" action="/users/<%= user._id %>/breweries" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
@@ -38,7 +39,7 @@
             <option value="🍻🍻🍻🍻🍻">🍻🍻🍻🍻🍻</option>
         </select>
         <label for="comment">Comment:</label>
-        <input type="text" name="comment" id="comment" />
+        <textarea name="comment" id="comment"></textarea>
         <button type="submit">Add Craft Beer</button> 
     </form>
      <div>

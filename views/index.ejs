@@ -9,7 +9,7 @@
 <body>
   <%- include('./partials/_navbar.ejs') %>
   <% if (user) { %>
-    <img src='./images/cbc-logo-transparent.PNG'>
+    <img src='./images/cbc-logo-transparent.PNG' class="img-size">
     <div class="content">
       <h3>Welcome to The Collective, <%= user.username %>!</h3>
       <p class="intro">
@@ -24,9 +24,9 @@
         <p>🍺 Cheers, <%= user.username %>!</p>
     </div> 
   <% } else { %>
-    <img src='./images/cbc-logo-transparent.PNG'>
+    <img src='./images/cbc-logo-transparent.PNG' class="img-size">
     <div>
-      <h3>Welcome to The Collective, my friend.</h3>
+      <h3>Welcome to The Collective</h3>
       <p class="intro">
         Your ultimate portal to the craft beer universe. A space where the art of brewing meets the vibes of a community that truly gets it. Whether you're a seasoned hop-head chasing those dank IPAs, a stout sage savoring the depths of dark brews, or just a curious soul ready to embark on a flavor journey, you’ve found your tribe.
       </p>

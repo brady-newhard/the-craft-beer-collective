@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link href="./css/output.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="/css/styles.css">
   <title><%= user.username %>'s Breweries</title>
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1><%= user.username %>'s Craft Beer</h1>
-  <ul class="user-list">
+  <img src='../images/cbc-logo-transparent.PNG' class="img-size">
+  <h2><%= user.username %>'s Craft Beer</h2>
+  <div class="brewery-grid">
     <% user.brewery.forEach((brewery) => { %>
-      <li>
-        <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><%= brewery.name %>'s <%= brewery.beer %></a>
-      </li>
+      <div class="brewery-item">
+        <div class="brewery-name"><%= brewery.name %></div>
+        <div class="brewery-detail"><%= brewery.beer %></div>
+        <div class="brewery-detail"><%= brewery.rating %></div>
+        <a href="/users/<%= user._id %>/breweries/<%= brewery._id %>"><button>View</button></a>
+     </div>
     <% }) %>
-  </ul>
-  <a href="/users"><button>Back to The Collective</button></a>
+      </div>
+        <a href="/users"><button>Back to The Collective</button></a>
+      </div>
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');

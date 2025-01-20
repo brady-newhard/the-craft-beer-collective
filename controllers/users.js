@@ -72,10 +72,10 @@ router.post('/:userId/breweries/', async (req, res) => {
 router.get('/:userId/breweries/:breweryId', async (req, res) => {
   try {
     const { userId, breweryId } = req.params;
-    const currentUserId = req.session.user._id;
+    const currentUserId = req.session.user ? req.session.user._id : null;
     const user = await User.findById(userId);
     const brewery = user.brewery.id(breweryId);
-    res.render('breweries/show.ejs', { brewery, userId, currentUserId });
+    res.render('breweries/show.ejs', { brewery, userId, currentUserId, user: req.session.user || null});
   } catch (error) {
     console.log(error);
     res.redirect('/');
