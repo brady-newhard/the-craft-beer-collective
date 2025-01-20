@@ -9,20 +9,20 @@
   <body class="background">
     <%- include('../partials/_navbar.ejs') %>
     <img src='/images/cbc-logo-transparent.PNG' class="img-size">
-    <ul>
-      <li class="brewery-list">
-        <h2>Brewery Details</h2>
+    <h3>Brewery Details</h3>
+        <div class="beer-grid beer-item">
         <div><%= brewery.name %></div>
         <div><%= brewery.location %></div>
         <div><a href="<%= brewery.link %>"><%= brewery.link %></a></div>
-        <h2>Beer Details</h2>
+    </div> 
+    <div><h3>Beer Details</h3></div>
+    <div class="beer-grid beer-item">
         <div>Name: <%= brewery.beer %></div>
         <div>Style: <%= brewery.type %></div>
         <div>Method: <%= brewery.method %></div>
         <div>Rating: <%= brewery.rating %></div>
-        <div>Comments: <%= brewery.comment %></div>
-      </li>
-    </ul>
+        <div>Comments: <%= brewery.comment %></div> 
+  </div>
     <% if (userId === currentUserId) { %>
       <a href="/users/<%= userId %>/breweries/<%= brewery._id %>/edit"><button>Edit</button></a>
       <form action="/users/<%= userId %>/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
