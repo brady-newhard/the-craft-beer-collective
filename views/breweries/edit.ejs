@@ -9,7 +9,7 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <img src='/images/cbc-logo-transparent.PNG' class="img-size">
+    <img src='/images/cbc-logo-transparent.png' class="img-size">
     <h2>Edit Your Craft Beer</h2>
     <form class="brewery-list" action="/users/<%= user._id %>/breweries/<%= brewery._id %>?_method=PUT" method="POST">
         <label for="name">Name:</label>
