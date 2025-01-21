@@ -44,10 +44,13 @@ h3 {
 }
   
 .intro {
+    width: 50%;
+    max-width: 37.5rem;
     font-size: 1rem;
     line-height: 1.8rem;
-    margin: 0rem 0..25rem 1.5rem 0.25rem;
+    margin: 0 auto 1.5rem auto;
     text-align: center;
+    
 }
 
 .highlights {
@@ -71,10 +74,12 @@ h3 {
 }
   
 .closing {
+    width: 50%;
+    max-width: 37.5rem;
     font-style: italic;
     font-size: 1.1rem;
     line-height: 1.8rem;
-    margin: 0rem 0.5rem 1.5rem 0.5rem;
+    margin: 0 auto 1.5rem auto;
     color: #E7C96A;
 }
 
@@ -323,6 +328,9 @@ button:hover {
 .nav-link {
     padding: 1rem;
     text-align: center;
+}
+.intro {
+    width: 100%;
 }
 
 .brewery-grid {
