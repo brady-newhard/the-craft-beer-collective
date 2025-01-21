@@ -7,6 +7,7 @@
 <p align="center">
 https://the-craft-beer-collective-30d7183bcd5d.herokuapp.com/
 </p>
+
 ## Deployment Versions
 <h3 align="center">Desktop</h3>
 
