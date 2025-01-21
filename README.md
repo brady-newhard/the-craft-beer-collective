@@ -1,9 +1,9 @@
 <p align="center">
-![Logo](./public/images/cbc-logo-transparent.png)
+  <img src="./public/images/cbc-logo-transparent.png" alt="Logo" width="200">
 </p>
 <h2 align="center">🍺 Welcome to The Craft Beer Collectve 🍺</h2>
 
-<p>It’s time to crack open a cold one and vibe with the best craft beer community on earth. Whether you’re chasing those dank IPAs, mellow stouts, or some funky sour brews, you’re in the right place. Start your jorny here:<p>
+<p>It’s time to crack open a cold one and vibe with the best craft beer community on earth. Whether you’re chasing those dank IPAs, mellow stouts, or some funky sour brews, you’re in the right place. Start your journy here:<p>
 <p align="center">
 https://the-craft-beer-collective-30d7183bcd5d.herokuapp.com/
 </p>
