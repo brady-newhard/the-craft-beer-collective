@@ -332,6 +332,9 @@ button:hover {
 .intro {
     width: 100%;
 }
+.closing {
+    width: 100%;
+}
 
 .brewery-grid {
     grid-template-columns: 1fr;
