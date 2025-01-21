@@ -14,8 +14,10 @@ https://the-craft-beer-collective-30d7183bcd5d.herokuapp.com/
 
 <h3 align="center">Mobile</h3>
 
-![Image of the mobile welcome page](.images/mobileIndex.PNG)
-![Image of the mobile show page](.images/mobileShow.PNG)
+![Image of the mobile welcome page](.images/mobileIndex.png)
+![Image of the mobile show page](.images/mobileShow.png)
+
+## Planning Tools
 
 <h3 align="center">ERD</h3>
 
