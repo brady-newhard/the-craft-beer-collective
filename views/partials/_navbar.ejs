@@ -1,6 +1,6 @@
 <header>
   <nav class="navbar">
-    <a href="/" class="logo">The CBC</a>
+    <a href="/" class="logo">The CBC Home</a>
     <button class="menu-toggle" id="menu-toggle">
       <span class="line"></span>
       <span class="line"></span>
@@ -10,10 +10,11 @@
       <!-- <a href="/" class="nav-link">Home</a> -->
       <% if (user) { %>
         <a href="/users/<%= user._id %>/breweries" class="nav-link">My Craft Beer</a>
-        <a href="/users" class="nav-link">The Collective</a>
+        <a href="/users" class="nav-link">The Collectve</a>
         <a href="/auth/sign-out" class="nav-link">Sign Out</a>
       <% } else { %>
         <a href="/auth/sign-in" class="nav-link">Sign In</a>
+        <a href="/auth/sign-up" class="nav-link">Sign Up</a>
       <% } %>
     </div>
   </nav>

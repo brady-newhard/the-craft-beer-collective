@@ -17,9 +17,9 @@ body {
 }
 
 .img-size {
-    max-width: 75%; /* Ensures the image does not exceed the container's width */
-    height: auto;    /* Maintains the aspect ratio */
-    display: block;  /* Removes extra space at the bottom of inline images */
+    max-width: 75%;  
+    height: auto;    
+    display: block; 
     margin: 0 auto; 
 }
 
@@ -179,6 +179,7 @@ img {
     margin: 0 auto;
     max-width: 50%;
 }
+
 .beer-item {
     display: grid;
     grid-template-columns: 1fr;
@@ -189,6 +190,18 @@ img {
     padding: 0.5rem 1rem;
     text-align: center;
 }
+.beer-item a {
+    text-decoration: none; 
+    color: #cca527; 
+    font-size: 1rem; 
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+}
+
+.beer-item a:hover {
+    color: white; 
+    text-decoration: underline;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -333,7 +346,9 @@ button:hover {
 .brewery-detail {
     grid-column: 1;
 }
-
+.beer-grid {
+    max-width: 75%;
+}         
 button {
     grid-column: 2; 
     /* align-self: end; */
