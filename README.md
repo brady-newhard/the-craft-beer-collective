@@ -1,9 +1,12 @@
+<p align="center">
 ![Logo](./public/images/cbc-logo-transparent.png)
+</p>
 <h2 align="center">🍺 Welcome to The Craft Beer Collectve 🍺</h2>
 
-<p>Welcome to the craft Beer Collectve. A page dedicated to craft beer and the people that drink them!<p>
+<p>It’s time to crack open a cold one and vibe with the best craft beer community on earth. Whether you’re chasing those dank IPAs, mellow stouts, or some funky sour brews, you’re in the right place. Start your jorny here:<p>
+<p align="center">
 https://the-craft-beer-collective-30d7183bcd5d.herokuapp.com/
-
+</p>
 <h3 align="center">ERD</h3>
 
 ![ERD](./public/images/ERD.png)
