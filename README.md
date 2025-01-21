@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/images/cbc-logo-transparent.png" alt="Logo" width="200">
+  <img src="./public/images/cbc-logo-transparent.png" alt="Logo" width="500">
 </p>
 <h2 align="center">🍺 Welcome to The Craft Beer Collectve 🍺</h2>
 
