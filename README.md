@@ -10,15 +10,16 @@ https://the-craft-beer-collective-30d7183bcd5d.herokuapp.com/
 
 ## Deployment Versions
 <h3 align="center">Desktop</h3>
-
+<div align="center">
+    <img src="./public/images/signInPage.png" alt="Image of the desktop sign in page" />
+</div>
 
 <h3 align="center">Mobile</h3>
-<p align="center">
-
-![Image of the mobile welcome page](./public/images/mobileIndex.png)
-![Image of the mobile show page](./public/images/mobileShow.png)
-
-</p>
+<div align="center">
+    <img src="./public/images/mobileIndex.png" alt="Image of the mobile welcome page" />
+    <br>
+    <img src="./public/images/mobileShow.png" alt="Image of the mobile show page" />
+</div>
 
 ## Planning Tools
 
