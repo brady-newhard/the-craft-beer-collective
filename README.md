@@ -3,7 +3,7 @@
 </p>
 <h2 align="center">🍺 Welcome to The Craft Beer Collectve 🍺</h2>
 
-<p>It’s time to crack open a cold one and vibe with the best craft beer community on earth. Whether you’re chasing those dank IPAs, mellow stouts, or some funky sour brews, you’re in the right place. Start your journey here:<p>
+<p>Here we have an app designed to bring craft beer enthusiasts together! This app allows users to build their own personalized craft beer database, logging and organizing their favorite brews. Users can also share their discoveries with the entire community aka "The Collectve", creating a vibrant space to connect, explore, and celebrate the art of craft beer. Whether you're a seasoned aficionado or a curious newcomer, The Craft Beer Collective is your gateway to the world of craft beer. You can start your journey here:<p>
 <p align="center">
 https://the-craft-beer-collective-30d7183bcd5d.herokuapp.com/
 </p>
@@ -52,5 +52,5 @@ The Craft Beer logo was made by ChatGPT and modified using GIMP
 
 ## Future Enhancement
 - Community chat feature
-- Added details
+- Added details (ABV, IBU's)
 - Check in feature
