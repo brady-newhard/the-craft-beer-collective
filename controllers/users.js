@@ -36,20 +36,6 @@ router.get('/:userId', async (req, res) => {
   }
 });
 
-// router.get('/:userId/breweries', async (req, res) => {
-//   try {
-//     const users = await User.find({})
-//     const breweries = users.flatMap(user => user.brewery.map(brewery => ({
-//       ...brewery.toObject(),
-//       createdBy: user._id, 
-//       ownerName: 
-//     })))
-//     console.log(breweries)
-//   } catch (error) {
-//         console.log(error);
-//        res.redirect('/');
-//      }
-
 // New
 router.get('/:userId/breweries/new', (req, res) => {
   res.render('breweries/new.ejs');
